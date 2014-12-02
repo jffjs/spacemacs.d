@@ -50,7 +50,12 @@
 (defun dotspacemacs/config ()
   "This is were you can ultimately override default Spacemacs configuration.
 This function is called at the very end of Spacemacs initialization."
-  (setq powerline-default-separator 'arrow)
+  (menu-bar-mode +1)
+  (set-default-font "Inconsolata-16")
+  (set-default 'truncate-lines t)
+  (setq-default indent-tabs-mode nil)
+  (setq tab-width 2)
+  (setq powerline-default-separator nil)
   (add-hook 'emacs-lisp-mode-hook 'evil-lisp-state)
 )
 
@@ -61,3 +66,21 @@ This function is called at the very end of Spacemacs initialization."
 ;; auto-generate custom variable definitions.
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ahs-case-fold-search nil)
+ '(ahs-default-range (quote ahs-range-whole-buffer))
+ '(ahs-idle-interval 0.25)
+ '(ahs-inhibit-face-list nil)
+ '(js2-basic-offset 2)
+ '(ring-bell-function (quote ignore) t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
