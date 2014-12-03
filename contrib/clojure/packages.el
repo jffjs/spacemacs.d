@@ -32,7 +32,9 @@
         "mcq" 'cider-quit
         "mck" 'cider-load-buffer
         "mcl" 'cider-load-file
-        "mcn" 'cider-repl-set-ns)
+        "mcn" 'cider-repl-set-ns
+        "mcd" 'cider-doc
+        "mca" 'cider-apropos)
 
       )))
 
