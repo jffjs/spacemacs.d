@@ -45,6 +45,6 @@
            "mcd" 'ruby-send-definition
            "mcr" 'ruby-send-region
            "mcb" 'ruby-send-block
-           "mcz" 'ruby-switch-to-inf))
+           "mz" 'ruby-switch-to-inf))
       (evil-leader/set-key-for-mode 'inf-ruby-mode
-        "mcz" 'ruby-switch-to-last-ruby-buffer))))
+        "mz" 'ruby-switch-to-last-ruby-buffer))))
