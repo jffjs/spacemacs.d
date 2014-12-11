@@ -27,6 +27,7 @@
 
       (evil-leader/set-key-for-mode 'clojure-mode
         "ml" 'evil-lisp-state
+        "mz" 'cider-switch-to-repl-buffer
         "mcj" 'cider-jack-in
         "mcc" 'cider-connect
         "mcq" 'cider-quit
@@ -52,4 +53,5 @@
       (add-hook 'cider-repl-mode-hook 'cider-repl-mode-defaults)
 
       (evil-leader/set-key-for-mode 'cider-repl-mode
+        "mz" 'cider-switch-to-last-clojure-buffer
         "mcq" 'cider-quit))))
