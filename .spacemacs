@@ -57,6 +57,9 @@ This function is called at the very end of Spacemacs initialization."
   (setq tab-width 2)
   (setq powerline-default-separator nil)
   (add-hook 'emacs-lisp-mode-hook 'evil-lisp-state)
+
+  (evil-leader/set-key
+    "]" 'indent-region)
 )
 
 ;; Custom variables
