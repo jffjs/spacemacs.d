@@ -53,5 +53,6 @@
       (add-hook 'cider-repl-mode-hook 'cider-repl-mode-defaults)
 
       (evil-leader/set-key-for-mode 'cider-repl-mode
+        "ml" 'evil-lisp-state
         "mz" 'cider-switch-to-last-clojure-buffer
         "mcq" 'cider-quit))))
