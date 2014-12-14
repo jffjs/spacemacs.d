@@ -3,6 +3,7 @@
     rvm
     rspec-mode
     inf-ruby
+    feature-mode
     ))
 
 (defun ruby/init-rvm ()
@@ -48,3 +49,14 @@
            "mz" 'ruby-switch-to-inf))
       (evil-leader/set-key-for-mode 'inf-ruby-mode
         "mz" 'ruby-switch-to-last-ruby-buffer))))
+
+(defun ruby/init-feature-mode ()
+  (use-package feature-mode
+    :init
+    (eval-after-load 'rvm
+      '(progn
+         (setq feature-use-rvm t)
+         (setq feature-cucumber-command "rspec {feature}")
+         (evil-leader/set-key-for-mode 'feature-mode
+           "mts" 'feature-verify-scenario-at-pos
+           "mtv" 'feature-verify-all-scenarios-in-buffer)))))

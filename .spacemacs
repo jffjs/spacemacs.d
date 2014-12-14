@@ -64,6 +64,9 @@ This function is called at the very end of Spacemacs initialization."
     "mA" 'org-archive-subtree
     "mo" 'org-open-at-point
     "mC" 'evil-org-recompute-clocks)
+
+  (evil-leader/set-key
+    "]" 'indent-region)
 )
 
 ;; Custom variables
