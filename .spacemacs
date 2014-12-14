@@ -57,6 +57,13 @@ This function is called at the very end of Spacemacs initialization."
   (setq tab-width 2)
   (setq powerline-default-separator nil)
   (add-hook 'emacs-lisp-mode-hook 'evil-lisp-state)
+
+  (evil-leader/set-key-for-mode 'org-mode
+    "mt" 'org-show-todo-tree
+    "ma" 'org-agenda
+    "mA" 'org-archive-subtree
+    "mo" 'org-open-at-point
+    "mC" 'evil-org-recompute-clocks)
 )
 
 ;; Custom variables

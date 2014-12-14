@@ -33,7 +33,7 @@
            "mtc" 'rspec-verify-continue
            "mtp" 'rspec-disable-example
            "mte" 'rspec-enable-example
-           "mtf" 'rspec-find-spec-or-target-other-window))))
+           "mtf" 'rspec-find-spec-or-target-other-window)))))
 
 (defun ruby/init-inf-ruby ()
   (use-package inf-ruby
