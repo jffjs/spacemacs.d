@@ -67,6 +67,8 @@ This function is called at the very end of Spacemacs initialization."
 
   (evil-leader/set-key
     "]" 'indent-region)
+
+  (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 )
 
 ;; Custom variables
