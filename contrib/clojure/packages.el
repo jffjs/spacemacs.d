@@ -34,8 +34,14 @@
         "mck" 'cider-load-buffer
         "mcl" 'cider-load-file
         "mcn" 'cider-repl-set-ns
-        "mcd" 'cider-doc
-        "mca" 'cider-apropos)
+        "mdd" 'cider-doc
+        "mdg" 'cider-grimoire
+        "mda" 'cider-apropos
+        "mgv" 'cider-jump-to-var
+        "mgr" 'cider-jump-to-resource
+        "mge" 'cider-jump-to-compilation-error
+        "mgs" 'cider-jump
+        "mtt" 'cider-test-run-tests)
 
       )))
 
