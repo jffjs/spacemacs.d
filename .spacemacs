@@ -50,6 +50,7 @@
 (defun dotspacemacs/config ()
   "This is were you can ultimately override default Spacemacs configuration.
 This function is called at the very end of Spacemacs initialization."
+  ;; (global-aggressive-indent-mode 1)
   (menu-bar-mode +1)
   (set-default-font "Inconsolata-16")
   (set-default 'truncate-lines t)
@@ -69,7 +70,7 @@ This function is called at the very end of Spacemacs initialization."
     "]" 'indent-region)
 
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
-)
+  )
 
 ;; Custom variables
 ;; ----------------
@@ -88,9 +89,10 @@ This function is called at the very end of Spacemacs initialization."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(ring-bell-function (quote ignore) t)
- '(rust-indent-method-chain t))
+ '(rust-indent-method-chain nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
