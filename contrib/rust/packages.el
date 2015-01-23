@@ -11,4 +11,6 @@
       (eval-after-load 'flycheck
         '(add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
       (add-hook 'rust-mode-hook (lambda ()
-                                  (flycheck-mode))))))
+                                  (flycheck-mode)))
+      (evil-leader/set-key-for-mode 'rust-mode
+        "." 'racer-find-definition))))
