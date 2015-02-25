@@ -10,7 +10,13 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
  ;; List of configuration layers to load.
+<<<<<<< HEAD
  dotspacemacs-configuration-layers '(clojure company-mode git html javascript nim restclient ruby rust)
+||||||| merged common ancestors
+ dotspacemacs-configuration-layers '(clojure company-mode git nim restclient ruby rust)
+=======
+ dotspacemacs-configuration-layers '(clojure company-mode git html javascript js-extra nim restclient ruby rust)
+>>>>>>> 9d59970f7dad82721d0ec02f480865f55fc23c74
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -70,6 +76,10 @@ This function is called at the very end of Spacemacs initialization."
     "]" 'indent-region)
 
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
+
+  ;; turn off scss compilation
+  (setq scss-compile-at-save nil)
+  (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
   )
 
 ;; Custom variables
@@ -89,10 +99,16 @@ This function is called at the very end of Spacemacs initialization."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(css-indent-offset 2)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
+ '(magit-use-overlays nil)
  '(ring-bell-function (quote ignore) t)
- '(rust-indent-method-chain nil))
+ '(rust-indent-method-chain nil)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2)
+ '(web-mode-sql-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
