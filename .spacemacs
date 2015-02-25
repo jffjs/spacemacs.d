@@ -10,7 +10,7 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(clojure company-mode git nim restclient ruby rust)
+ dotspacemacs-configuration-layers '(clojure company-mode git html javascript nim restclient ruby rust)
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
