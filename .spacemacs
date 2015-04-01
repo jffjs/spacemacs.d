@@ -10,7 +10,7 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(clojure company-mode git html javascript nim restclient ruby rust)
+ dotspacemacs-configuration-layers '(clojure company-mode git html javascript markdown nim osx restclient ruby rust)
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -73,7 +73,7 @@ This function is called at the very end of Spacemacs initialization."
 
   ;; turn off scss compilation
   (setq scss-compile-at-save nil)
-  (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
   )
 
 ;; Custom variables
@@ -96,11 +96,14 @@ This function is called at the very end of Spacemacs initialization."
  '(css-indent-offset 2)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
+ '(js2-indent-switch-body t)
  '(magit-use-overlays nil)
  '(ring-bell-function (quote ignore) t)
  '(rust-indent-method-chain nil)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-indentation t)
+ '(web-mode-indent-style 2)
  '(web-mode-markup-indent-offset 2)
  '(web-mode-sql-indent-offset 2))
 (custom-set-faces
