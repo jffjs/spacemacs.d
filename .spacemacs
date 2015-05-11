@@ -96,6 +96,7 @@ This function is called at the very end of Spacemacs initialization."
  '(css-indent-offset 2)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
+ '(js2-indent-switch-body t)
  '(magit-use-overlays nil)
  '(ring-bell-function (quote ignore) t)
  '(rust-indent-method-chain nil)
