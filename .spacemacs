@@ -73,6 +73,7 @@ This function is called at the very end of Spacemacs initialization."
 
   ;; turn off scss compilation
   (setq scss-compile-at-save nil)
+  (setq magit-last-seen-setup-instructions "1.4.0")
   )
 
 ;; Custom variables
@@ -101,6 +102,8 @@ This function is called at the very end of Spacemacs initialization."
  '(rust-indent-method-chain nil)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-indentation t)
+ '(web-mode-indent-style 2)
  '(web-mode-markup-indent-offset 2)
  '(web-mode-sql-indent-offset 2))
 (custom-set-faces
