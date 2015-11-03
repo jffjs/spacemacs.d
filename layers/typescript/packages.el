@@ -18,6 +18,7 @@
                   (setq flycheck-check-syntax-automatically '(save mode-enabled))
                   (eldoc-mode +1)
                   (company-mode-on)))
+      (evil-set-initial-state 'tide-references-mode 'emacs)
       (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
       (add-hook 'web-mode-hook
                 (lambda ()
