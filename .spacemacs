@@ -8,9 +8,34 @@
 (setq-default
  ;; List of additional paths where to look for configuration layers.
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
- dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
+ dotspacemacs-configuration-layer-path '("~/spacemacs.d/layers/")
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(clojure auto-completion git html javascript jsx nim org restclient ruby rust syntax-checking)
+ dotspacemacs-configuration-layers '(
+                                     auto-completion
+                                     clojure
+                                     colors
+                                     common-lisp
+                                     dash
+                                     emacs-lisp
+                                     git
+                                     html
+                                     javascript
+                                     markdown
+                                     org
+                                     osx
+                                     react
+                                     restclient
+                                     ruby
+                                     ruby-on-rails
+                                     rust
+                                     shell-scripts
+                                     svn
+                                     sql
+                                     syntax-checking
+                                     typescript
+                                     version-control
+                                     yaml
+                                     )
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -74,6 +99,33 @@ This function is called at the very end of Spacemacs initialization."
   ;; turn off scss compilation
   (setq scss-compile-at-save nil)
   (setq magit-last-seen-setup-instructions "1.4.0")
+
+  ;; HipChat
+  (setq ssl-program-name "gnutls-cli"
+        ssl-program-arguments '("--insecure" "-p" service host)
+        ssl-certificate-verification-policy 1)
+
+  (setq jabber-account-list '(("296829_2060632@chat.hipchat.com"
+                               (:port . 5223)
+                               (:password . "")
+                               (:connection-type . ssl))))
+  ;; HIPCHAT_ROOM_LIST=room1:1234_room1;room2:1234_room2
+  (defvar hipchat-room-list '(
+                              ("Onboarding" . "296829_onboarding")
+                              ))
+
+  (defvar hipchat-number "296829_2060632")
+  (defvar hipchat-nickname "Jeff Smith")
+  (defun hipchat-join ()
+    (interactive)
+    (let* ((room-list (sort (mapcar 'car hipchat-room-list) 'string-lessp))
+           (selected-room (completing-read "Room name: " room-list))
+           (hipchat-mapping (cdr (assoc selected-room hipchat-room-list))))
+      (jabber-groupchat-join
+       (jabber-read-account)
+       (concat hipchat-number "" hipchat-mapping "@conf.hipchat.com")
+       hipchat-nickname
+       t)))
   )
 
 ;; Custom variables
@@ -100,6 +152,7 @@ This function is called at the very end of Spacemacs initialization."
  '(magit-use-overlays nil)
  '(ring-bell-function (quote ignore) t)
  '(rust-indent-method-chain nil)
+ '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
