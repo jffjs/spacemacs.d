@@ -18,7 +18,6 @@
                   (setq flycheck-check-syntax-automatically '(save mode-enabled))
                   (eldoc-mode +1)
                   (company-mode-on)))
-      (evil-set-initial-state 'tide-references-mode 'emacs)
       (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
       (add-hook 'web-mode-hook
                 (lambda ()
@@ -30,4 +29,15 @@
                     (company-mode-on))))
       (evil-leader/set-key-for-mode 'typescript-mode
         "mgg" 'tide-jump-to-definition
-        "mgb" 'tide-jump-back))))
+        "mgb" 'tide-jump-back
+        "mhh" 'tide-documentation-at-point
+        "mrn" 'tide-rename-symbol
+        "mrr" 'tide-references))
+    :config
+    (progn
+      (spacemacs|evilify-map tide-references-mode-map
+        :mode tide-references-mode
+        :bindings
+        (kbd "C-n") 'tide-find-next-reference
+        (kbd "C-p") 'tide-find-previous-reference
+        (kbd "q") 'kill-buffer-and-window))))
