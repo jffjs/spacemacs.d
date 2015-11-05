@@ -8,9 +8,31 @@
 (setq-default
  ;; List of additional paths where to look for configuration layers.
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
- dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
+ ;; dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(clojure auto-completion git html javascript jsx nim org restclient ruby rust syntax-checking)
+ dotspacemacs-configuration-layers '(auto-completion
+                                     colors
+                                     dash
+                                     git
+                                     org
+                                     restclient
+                                     syntax-checking
+                                     c-c++
+                                     clojure
+                                     common-lisp
+                                     emacs-lisp
+                                     html
+                                     javascript
+                                     markdown
+                                     nim
+                                     python
+                                     react
+                                     ruby
+                                     ruby-on-rails
+                                     rust
+                                     shell-scripts
+                                     typescript
+                                     yaml)
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -100,6 +122,7 @@ This function is called at the very end of Spacemacs initialization."
  '(magit-use-overlays nil)
  '(ring-bell-function (quote ignore) t)
  '(rust-indent-method-chain nil)
+ '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
