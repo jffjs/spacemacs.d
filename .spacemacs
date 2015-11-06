@@ -8,31 +8,35 @@
 (setq-default
  ;; List of additional paths where to look for configuration layers.
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
- ;; dotspacemacs-configuration-layer-path '("~/spacemacs.d/contrib/")
+ dotspacemacs-configuration-layer-path '("~/spacemacs.d/layers/")
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(auto-completion
-                                     colors
-                                     dash
-                                     git
-                                     org
-                                     restclient
-                                     syntax-checking
-                                     c-c++
+ dotspacemacs-configuration-layers '(
+                                     auto-completion
                                      clojure
+                                     c-c++
+                                     colors
                                      common-lisp
+                                     dash
                                      emacs-lisp
+                                     git
                                      html
                                      javascript
                                      markdown
-                                     nim
-                                     python
+                                     org
+                                     osx
                                      react
+                                     restclient
                                      ruby
                                      ruby-on-rails
                                      rust
                                      shell-scripts
+                                     svn
+                                     sql
+                                     syntax-checking
                                      typescript
-                                     yaml)
+                                     version-control
+                                     yaml
+                                     )
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
