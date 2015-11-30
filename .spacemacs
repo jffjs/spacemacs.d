@@ -83,6 +83,7 @@ This function is called at the very end of Spacemacs initialization."
   (setq tab-width 2)
   (setq powerline-default-separator nil)
   (add-hook 'emacs-lisp-mode-hook 'evil-lisp-state)
+  (global-company-mode)
 
   (evil-leader/set-key-for-mode 'org-mode
     "mt" 'org-show-todo-tree
@@ -145,6 +146,7 @@ This function is called at the very end of Spacemacs initialization."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(coffee-indent-like-python-mode t)
  '(css-indent-offset 2)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
