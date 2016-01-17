@@ -35,7 +35,7 @@
         "mrr" 'tide-references))
     :config
     (progn
-      (spacemacs|evilify-map tide-references-mode-map
+      (evilified-state-evilify-map tide-references-mode-map
         :mode tide-references-mode
         :bindings
         (kbd "C-n") 'tide-find-next-reference
