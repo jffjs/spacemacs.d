@@ -16,7 +16,7 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '("~/spacemacs.d/layers/")
+   ;; dotspacemacs-configuration-layer-path '("~/spacemacs.d/layers/")
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -27,8 +27,11 @@ values."
      colors
      common-lisp
      dash
+     elixir
+     elm
      emacs-lisp
      git
+     haskell
      html
      javascript
      markdown
@@ -37,14 +40,12 @@ values."
      react
      restclient
      ruby
-     ruby-on-rails
      rust
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
      shell-scripts
      sql
-     svn
      syntax-checking
      typescript
      version-control
@@ -250,6 +251,7 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (setq-default rust-enable-racer t)
   )
 
 (defun dotspacemacs/user-config ()
